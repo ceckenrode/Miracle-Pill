@@ -109,11 +109,16 @@
                                     <constraint firstAttribute="height" constant="134" id="siY-nQ-6QT"/>
                                 </constraints>
                             </pickerView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-OK-4un">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-OK-4un">
                                 <frame key="frameInset" minX="81" minY="520" width="213" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1C-ch-Nbs"/>
+                                </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="0jC-24-m4w">
+                                <frame key="frameInset" minX="68" minY="278" width="240" height="192"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -132,6 +137,7 @@
                             <constraint firstItem="IT5-kP-BqX" firstAttribute="trailing" secondItem="B06-Hp-YGF" secondAttribute="trailing" id="FZD-7O-KfF"/>
                             <constraint firstItem="suc-Wb-DiD" firstAttribute="leading" secondItem="IT5-kP-BqX" secondAttribute="leading" id="Joa-aL-hii"/>
                             <constraint firstAttribute="trailing" secondItem="DFW-YX-dQE" secondAttribute="trailing" constant="20" id="KWu-Lz-EhD"/>
+                            <constraint firstItem="0jC-24-m4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MM1-PR-Hs4"/>
                             <constraint firstItem="Wpw-Nn-hDX" firstAttribute="top" secondItem="gbv-Hm-ogz" secondAttribute="bottom" constant="8" id="Q0x-xX-ehu"/>
                             <constraint firstItem="qha-PS-EXo" firstAttribute="trailing" secondItem="Wpw-Nn-hDX" secondAttribute="trailing" id="Q3E-VQ-MXB"/>
                             <constraint firstItem="T2J-dw-hFu" firstAttribute="leading" secondItem="qha-PS-EXo" secondAttribute="leading" id="QM4-dz-1PY"/>
@@ -140,8 +146,10 @@
                             <constraint firstItem="3La-Tm-4Nu" firstAttribute="top" secondItem="ll0-uj-1R3" secondAttribute="bottom" constant="8" id="UIN-QK-1aW"/>
                             <constraint firstItem="Wpw-Nn-hDX" firstAttribute="leading" secondItem="gbv-Hm-ogz" secondAttribute="leading" id="XyS-79-hiX"/>
                             <constraint firstItem="UD8-GA-GL8" firstAttribute="top" secondItem="ob7-IY-ECK" secondAttribute="bottom" constant="8" id="aDH-SI-5nm"/>
+                            <constraint firstItem="0jC-24-m4w" firstAttribute="top" secondItem="ob7-IY-ECK" secondAttribute="bottom" constant="89" id="aXu-Ty-zOB"/>
                             <constraint firstItem="gbv-Hm-ogz" firstAttribute="trailing" secondItem="suc-Wb-DiD" secondAttribute="trailing" id="aZx-Gd-VVO"/>
                             <constraint firstItem="gbv-Hm-ogz" firstAttribute="leading" secondItem="suc-Wb-DiD" secondAttribute="leading" id="ak8-8W-J3l"/>
+                            <constraint firstItem="JMT-OK-4un" firstAttribute="top" secondItem="ll0-uj-1R3" secondAttribute="bottom" constant="60" id="bfH-gG-eaK"/>
                             <constraint firstItem="DFW-YX-dQE" firstAttribute="top" secondItem="UD8-GA-GL8" secondAttribute="bottom" constant="10" id="cf3-fq-f4s"/>
                             <constraint firstItem="suc-Wb-DiD" firstAttribute="top" secondItem="IT5-kP-BqX" secondAttribute="bottom" constant="8" id="ftz-RU-AbF"/>
                             <constraint firstItem="T2J-dw-hFu" firstAttribute="top" secondItem="qha-PS-EXo" secondAttribute="bottom" constant="8" id="kun-gc-snk"/>
@@ -150,14 +158,17 @@
                             <constraint firstItem="ob7-IY-ECK" firstAttribute="centerX" secondItem="lgj-1O-2lP" secondAttribute="centerX" id="plg-51-Yo2"/>
                             <constraint firstItem="B06-Hp-YGF" firstAttribute="top" secondItem="DFW-YX-dQE" secondAttribute="bottom" constant="8" id="qPp-NO-gXw"/>
                             <constraint firstItem="3La-Tm-4Nu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sCj-Yb-Gdl"/>
+                            <constraint firstItem="0jC-24-m4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v4Z-oj-Bcg"/>
                             <constraint firstItem="ll0-uj-1R3" firstAttribute="top" secondItem="T2J-dw-hFu" secondAttribute="bottom" constant="8" id="vYi-0B-wxh"/>
                             <constraint firstItem="qha-PS-EXo" firstAttribute="leading" secondItem="Wpw-Nn-hDX" secondAttribute="leading" id="wda-bG-yzA"/>
+                            <constraint firstItem="JMT-OK-4un" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xfr-id-NgD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buyNowBtn" destination="JMT-OK-4un" id="km0-R7-nzN"/>
                         <outlet property="statePicker" destination="3La-Tm-4Nu" id="Bhh-1L-mxA"/>
                         <outlet property="statePickerBtn" destination="ll0-uj-1R3" id="74H-4p-6I4"/>
+                        <outlet property="successImg" destination="0jC-24-m4w" id="YPE-g4-elq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -168,5 +179,6 @@
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>

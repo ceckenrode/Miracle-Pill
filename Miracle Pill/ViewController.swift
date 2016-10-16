@@ -13,7 +13,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
     @IBOutlet weak var buyNowBtn: UIButton!
-    
+    @IBOutlet weak var successImg: UIImageView!
     let states = [
         "ALABAMA",
         "ALASKA",
@@ -85,6 +85,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         buyNowBtn.isHidden = true
     }
     
+    @IBAction func buyNowBtnPressed(_ sender: AnyObject) {
+        successImg.isHidden = false
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         //how many columns in list
@@ -104,6 +107,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         statePicker.isHidden = true
         buyNowBtn.isHidden = false
     }
-
+    
+    
 }
 
