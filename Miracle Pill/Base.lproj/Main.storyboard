@@ -109,6 +109,11 @@
                                     <constraint firstAttribute="height" constant="134" id="siY-nQ-6QT"/>
                                 </constraints>
                             </pickerView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-OK-4un">
+                                <frame key="frameInset" minX="81" minY="520" width="213" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="buyNowBtn"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -150,6 +155,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyNowBtn" destination="JMT-OK-4un" id="km0-R7-nzN"/>
                         <outlet property="statePicker" destination="3La-Tm-4Nu" id="Bhh-1L-mxA"/>
                         <outlet property="statePickerBtn" destination="ll0-uj-1R3" id="74H-4p-6I4"/>
                     </connections>
@@ -160,6 +166,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
     </resources>
 </document>
